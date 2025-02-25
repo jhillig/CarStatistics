@@ -1,0 +1,16 @@
+
+<div *ngIf="show()==3">
+<div id="headerdiv">
+  <p>STATISTIK 3: Überblick aller Mängel</p>
+</div>
+
+<div id="selectdiv">
+  <fieldset>
+      <button (click)="createData()">Paint chart!</button> 
+  </fieldset>
+</div>
+
+  <div  class="chart-container">
+    <canvas  id="MyChart4"  ></canvas>
+  </div>
+</div>

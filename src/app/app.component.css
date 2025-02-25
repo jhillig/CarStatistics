@@ -1,0 +1,43 @@
+
+app-menue{
+  background: rgb(255, 255, 255);
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 0px;
+  padding: 0px;
+}
+
+app-statistic1{
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin: 0px 0px;
+  padding: 0px;
+}
+
+#coverdiv{
+        display: flex;
+    flex-direction: row;
+  justify-content: left;
+  align-items: top;
+  margin: 0px ;
+
+}
+
+#menuediv{
+    border: 1px solid rgb(255, 255, 255);
+    width: 20%;
+}
+
+#contentdiv{
+    border: 1px solid rgb(255, 255, 255);
+    margin: 0px 0px;
+    padding: 0px;
+    width: 80%;
+   
+}

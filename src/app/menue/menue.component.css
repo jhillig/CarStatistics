@@ -1,0 +1,60 @@
+p:hover{
+    color: rgb(255, 0, 93);
+}
+p{
+    font-weight: bold;
+}
+
+button{
+    color: rgb(3, 0, 4);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    padding: 10px; 
+    margin: 0px 0px 15px 0px ;
+    border: 2px solid rgb(102, 207, 22);
+    border-radius: 5px;
+    width: 80%;
+}
+button:hover{
+
+    box-shadow: 3px 2px 20px 2px rgba(111, 56, 56, 0.30);color: rgb(3, 0, 4);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    padding: 10px; 
+    margin: 0px 0px 15px 0px ;
+    border: 2px solid rgb(207, 22, 22);
+    border-radius: 5px;
+    width: 80%;
+}
+
+button:active {
+    transform: scale(0.98);
+        box-shadow: 3px 2px 20px 2px rgba(111, 56, 56, 0.30);
+   
+}
+.btn-default {
+    color: rgb(3, 0, 4);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    padding: 10px; 
+    margin: 0px 0px 15px 0px ;
+    border: 2px solid rgb(102, 207, 22);
+    border-radius: 5px;
+    width: 80%;
+  
+  }
+  
+  .btn-selected {
+    color: rgb(93, 9, 9);
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    padding: 10px; 
+    margin: 0px 0px 15px 0px ;
+    border: 2px solid rgb(207, 22, 22);
+    border-radius: 5px;
+    width: 80%;
+  }

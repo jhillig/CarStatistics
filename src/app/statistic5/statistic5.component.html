@@ -1,0 +1,17 @@
+<div *ngIf="show()==5">
+    <div id="headerdiv">
+        <p>Liste aller registrierten Fahrzeuge:</p>
+    </div>
+      
+      
+
+      <ol>
+        @for(car of cars$|async; track $index){
+        <li> Model: {{car.carMod}} - Kraftstoff: {{car.engine}} - Hubraum: {{car.engineSize}}Liter  - Baujahr: {{car.year}} - Mängel-Code: {{car.issue}}</li>  
+        }
+        @empty {
+        <li> keine Fahrzeuge geladen </li>>
+        }
+      </ol>
+    
+</div>

@@ -1,0 +1,43 @@
+<div *ngIf="show()==2">
+<div id="headerdiv">
+    <p>STATISTIK 2: {{testmodel}} - {{testissue}}</p>
+  </div>
+
+
+
+  <div id="selectdiv">
+  <fieldset>   
+    <select #modsRef (change)= "chooseModel()" name="model-select" id="model-select2">
+    <option >Wähle Model</option> 
+      @for(item of models; track $index){
+        <option  id={{item}} value={{item}}>  {{item}}</option>
+         
+      }@empty {
+        <p>nothing</p>
+      }
+  </select>
+
+  <select #issuesRef (change)= "chooseIssue()" name="issue-select" id="issue-select2">
+    <option >Wähle Mangel</option> 
+      @for(item of issues; track $index){
+        <option  id={{item}} value={{item}}>  {{item}}</option>
+         
+      }@empty {
+        <p>nothing</p>
+      }
+  </select>
+
+  
+
+  <input (click)="toggle('absolute')" type="radio"  id="input1" name="toggle2"  checked />absolut
+  <input (click)="toggle('relative')" type="radio" id="input2" name="toggle2" />relativ
+
+  <button (click)="start()">Paint chart!</button>  
+
+</fieldset>   
+  </div>
+
+     <div  class="chart-container">
+      <canvas     id="MyChart2" >{{ chart }}</canvas>
+    </div>
+  </div>

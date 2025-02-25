@@ -1,0 +1,46 @@
+div{
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
+    padding: 0px;
+}
+
+#headerdiv{
+  margin: 0px 0px;
+  
+}
+
+p{
+    color: beige;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(34, 17, 76);
+    padding: 10px; 
+    margin: 0px ;
+    border: 1px solid rgb(102, 207, 22);
+    border-radius: 5px;
+}
+
+fieldset{
+  margin-top: 5px;
+  padding: 3px;
+  border: 1px solid rgb(102, 207, 22);
+border-radius: 3px;
+}
+
+
+button{
+  margin-left: 15px; 
+  background-color: rgb(255, 255, 255); 
+   border-radius: 3px;
+}
+
+button:hover{
+  background-color: rgb(225, 241, 225);
+  box-shadow: 3px 2px 20px 2px rgba(151, 47, 130, 0.3);
+  border-radius: 3px;
+}
+
+button:active {
+  transform: scale(0.98);
+      box-shadow: 3px 2px 20px 2px rgba(111, 56, 56, 0.30);
+      border-radius: 3px;
+}
