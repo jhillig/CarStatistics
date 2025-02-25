@@ -10,7 +10,6 @@ export class Statistic2Service {
   testyear='2012';
   testissue='P1';
   testmodel='';
-
   
  issues:any=[""];
  cnt:any=[""];
@@ -18,31 +17,29 @@ export class Statistic2Service {
   
  
 
-getModelList(){
+  getModelList(){
 
-  var models:any= [];
- var  url = new URL('http://localhost:8080/ModelList');
+    var models:any= [];
+    var  url = new URL('http://localhost:8080/ModelList');
+      
+    if(URL.canParse(url)){
+      console.log("URL "+url +" ist ok!");
+    }
 
-    console.log("in getModelList() mit "+url);
-
-  if(URL.canParse(url)){
-    console.log("URL "+url +" ist ok!");
-  }
-
-  fetch('http://localhost:8080/ModelList')
-    .then(response => response.json())
-    .then(json => { 
-            
-      json.forEach((item: any) => {
-      models.push(item.carMod);
-     console.log("fetch ok ");
-     models.sort();
+    fetch('http://localhost:8080/ModelList')
+      .then(response => response.json())
+      .then(json => { 
+              
+        json.forEach((item: any) => {
+        models.push(item.carMod);
+      console.log("fetch ok ");
+      models.sort();
+        })
       })
-    })
-    .catch(error=>{ console.log("myFehler: "+error);
-    })
-  
-    return models;
+      .catch(error=>{ console.log("myFehler: "+error);
+      })
+    
+      return models;
 
   }
 
@@ -84,8 +81,7 @@ getModelList(){
  async getCountOfIssuesByModel(testmodel:string, testissue:string) 
    {
     var url = new URL('http://localhost:8080/CountOfIssuesByModelAndIssues?model='+testmodel+'&issue='+testissue);
-    console.log("in fetchAllIssuesByModel() mit "+url);
-  
+     
     //this.issues.splice(0,this.issues.length);
     this.cnt.splice(0,this.cnt.length);
     this.year.splice(0,this.year.length);
@@ -121,9 +117,7 @@ getModelList(){
      console.log("in fetchAllIssuesByModel() mit "+url);
    
      issues.splice(0,this.issues.length);
-     //this.cnt.splice(0,this.cnt.length);
-   
-   
+       
      if(URL.canParse(url)){
        console.log("URL "+url +" ist ok!");
      }
@@ -142,11 +136,11 @@ getModelList(){
        
      
           for(let i=0; i<(this.issues.length);i++ ) {
-           console.log("Issue: "+this.issues[i]+"  "+this.cnt[i]);}
-
-       return issues.sort();
-     
+           console.log("Issue: "+this.issues[i]+"  "+this.cnt[i]);
           }
+
+          return issues.sort();     
+   }
           
  
           async getCountOfModel(testmodel:String){

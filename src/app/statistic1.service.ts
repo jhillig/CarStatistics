@@ -6,17 +6,6 @@ import { Injectable } from '@angular/core';
 export class Statistic1Service {
 
   constructor() { }
-  /*
-  testyear='2012';
-  testissue='P1';
-  testmodel='';
-
-
- issues:any=[""];
- cnt1:any=[""];
- cnt2:any=[""];
-  
- */
 
 getModelList(){
 
@@ -39,39 +28,7 @@ getModelList(){
   }
 
  
-/*
- async getAllIssuesByModel(testmodel:string) 
-   {
-    var url = new URL('http://localhost:8080/AllIssuesByModel?model='+testmodel);
-    console.log("in fetchAllIssuesByModel() mit "+url);
-  
-    this.issues.splice(0,this.issues.length);
-    this.cnt1.splice(0,this.cnt1.length);
-  
-  
-    if(URL.canParse(url)){
-      console.log("URL "+url +" ist ok!");
-    }
-  
-   await fetch(url)
-      .then(response => response.json())
-      .then(json => { 
-              
-        json.forEach((item: any) => {
-       this.issues.push(item.issueCode);
-       this.cnt1.push(item.count);
-        console.log("fetch ok ");
-       
-        })
-      })
-      
-      .catch(error=>{ console.log("myFehler: "+error);
-      })
-      
-         for(let i=0; i<(this.issues.length);i++ ) {
-          console.log("Issue: "+this.issues[i]+"  "+this.cnt1[i]);}
-    }
-          */
+/* */
 
 async getCountOfModel(testmodel:String){
 
@@ -97,10 +54,7 @@ async getCountOfModel(testmodel:String){
       .catch(error=>{ console.log("myFehler: "+error);
       })
       
-       /* for(let i=0; i<(this.issues.length);i++ ) {
-          console.log("Issue: "+this.issues[i]+"  "+this.cnt1[i]);
-        }*/
-    return i;
+     return i;
 
 }
 
@@ -126,12 +80,6 @@ async getCountOfModel(testmodel:String){
     
     .catch(error=>{ console.log("myFehler: "+error);
     })
-
     return m1;//map
   }
-
-
-
-
- 
 }
